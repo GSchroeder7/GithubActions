@@ -31,5 +31,100 @@ namespace GithubActionsLab
         }
 
         // Implement 3 tests per operation, following a similar pattern as above
+        [TestGriffinSchroeder]
+        public void Subtract_ValidTestGriffinSchroeder()
+        {
+            Assert.AreEqual(-1, Program.Subtract("1", "2"));
+            Assert.AreEqual(1, Program.Subtract("3", "2"));
+            Assert.AreEqual(-2, Program.Subtract("5", "7"));
+        }
+
+        [TestGriffinSchroeder]
+        public void Subtract_InvalidTestGriffinSchroeder()
+        {
+            Assert.Throws<FormatException>(() => Program.Subtract("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Subtract("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Subtract("a", "a"));
+        }
+
+        [TestGriffinSchroeder]
+        public void Subtract_NullTestGriffinSchroeder()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, null));
+        }
+
+        [TestGriffinSchroeder]
+        public void Multiply_ValidTestGriffinSchroeder()
+        {
+            Assert.AreEqual(2, Program.Multiply("1", "2"));
+            Assert.AreEqual(6, Program.Multiply("3", "2"));
+            Assert.AreEqual(35, Program.Multiply("5", "7"));
+        }
+
+        [TestGriffinSchroeder]
+        public void Multiply_InvalidTestGriffinSchroeder()
+        {
+            Assert.Throws<FormatException>(() => Program.Multiply("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Multiply("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Multiply("a", "a"));
+        }
+
+        [TestGriffinSchroeder]
+        public void Multiply_NullTestGriffinSchroeder()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, null));
+        }
+
+        [TestGriffinSchroeder]
+        public void Divide_ValidTestGriffinSchroeder()
+        {
+            Assert.AreEqual(2, Program.Divide("4", "2"));
+            Assert.AreEqual(1, Program.Divide("3", "3"));
+            Assert.AreEqual(1, Program.Divide("5", "5"));
+        }
+
+        [TestGriffinSchroeder]
+        public void Divide_ValidTestGriffinSchroeder()
+        {
+            Assert.Throws<FormatException>(() => Program.Divide("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Divide("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Divide("a", "a"));
+        }
+
+        [TestGriffinSchroeder]
+        public void Divide_ValidTestGriffinSchroeder()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Divide("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Divide(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Divide(null, null));
+        }
+
+        [TestGriffinSchroeder]
+        public void Power_ValidTestGriffinSchroeder()
+        {
+            Assert.AreEqual(4, Program.Power("2", "2"));
+            Assert.AreEqual(27, Program.Power("3", "3"));
+            Assert.AreEqual(125, Program.Power("5", "3"));
+        }
+
+        [TestGriffinSchroeder]
+        public void Power_ValidTestGriffinSchroeder()
+        {
+            Assert.Throws<FormatException>(() => Program.Power("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Power("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Power("a", "a"));
+        }
+
+        [TestGriffinSchroeder]
+        public void Power_ValidTestGriffinSchroeder()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
+        }
     }
 }
