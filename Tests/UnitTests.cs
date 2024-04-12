@@ -31,7 +31,7 @@ namespace GithubActionsLab
         }
 
         // Implement 3 tests per operation, following a similar pattern as above
-        [TestGriffinSchroeder]
+        [Test]
         public void Subtract_ValidTestGriffinSchroeder()
         {
             Assert.AreEqual(-1, Program.Subtract("1", "2"));
@@ -39,7 +39,7 @@ namespace GithubActionsLab
             Assert.AreEqual(-2, Program.Subtract("5", "7"));
         }
 
-        [TestGriffinSchroeder]
+        [Test]
         public void Subtract_InvalidTestGriffinSchroeder()
         {
             Assert.Throws<FormatException>(() => Program.Subtract("1", "a"));
@@ -47,7 +47,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Subtract("a", "a"));
         }
 
-        [TestGriffinSchroeder]
+        [Test]
         public void Subtract_NullTestGriffinSchroeder()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
@@ -55,7 +55,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, null));
         }
 
-        [TestGriffinSchroeder]
+        [Test]
         public void Multiply_ValidTestGriffinSchroeder()
         {
             Assert.AreEqual(2, Program.Multiply("1", "2"));
@@ -63,7 +63,7 @@ namespace GithubActionsLab
             Assert.AreEqual(35, Program.Multiply("5", "7"));
         }
 
-        [TestGriffinSchroeder]
+        [Test]
         public void Multiply_InvalidTestGriffinSchroeder()
         {
             Assert.Throws<FormatException>(() => Program.Multiply("1", "a"));
@@ -71,7 +71,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Multiply("a", "a"));
         }
 
-        [TestGriffinSchroeder]
+        [Test]
         public void Multiply_NullTestGriffinSchroeder()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Multiply("1", null));
@@ -79,7 +79,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, null));
         }
 
-        [TestGriffinSchroeder]
+        [Test]
         public void Divide_ValidTestGriffinSchroeder()
         {
             Assert.AreEqual(2, Program.Divide("4", "2"));
@@ -87,7 +87,7 @@ namespace GithubActionsLab
             Assert.AreEqual(1, Program.Divide("5", "5"));
         }
 
-        [TestGriffinSchroeder]
+        [Test]
         public void Divide_InvalidTestGriffinSchroeder()
         {
             Assert.Throws<FormatException>(() => Program.Divide("1", "a"));
@@ -95,7 +95,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Divide("a", "a"));
         }
 
-        [TestGriffinSchroeder]
+        [Test]
         public void Divide_NullTestGriffinSchroeder()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Divide("1", null));
@@ -103,7 +103,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, null));
         }
 
-        [TestGriffinSchroeder]
+        [Test]
         public void Power_ValidTestGriffinSchroeder()
         {
             Assert.AreEqual(4, Program.Power("2", "2"));
@@ -111,7 +111,7 @@ namespace GithubActionsLab
             Assert.AreEqual(125, Program.Power("5", "3"));
         }
 
-        [TestGriffinSchroeder]
+        [Test]
         public void Power_InvalidTestGriffinSchroeder()
         {
             Assert.Throws<FormatException>(() => Program.Power("1", "a"));
@@ -119,7 +119,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Power("a", "a"));
         }
 
-        [TestGriffinSchroeder]
+        [Test]
         public void Power_NullTestGriffinSchroeder()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
