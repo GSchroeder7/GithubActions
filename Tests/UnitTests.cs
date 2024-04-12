@@ -88,7 +88,7 @@ namespace GithubActionsLab
         }
 
         [TestGriffinSchroeder]
-        public void Divide_ValidTestGriffinSchroeder()
+        public void Divide_InvalidTestGriffinSchroeder()
         {
             Assert.Throws<FormatException>(() => Program.Divide("1", "a"));
             Assert.Throws<FormatException>(() => Program.Divide("a", "1"));
@@ -96,7 +96,7 @@ namespace GithubActionsLab
         }
 
         [TestGriffinSchroeder]
-        public void Divide_ValidTestGriffinSchroeder()
+        public void Divide_NullTestGriffinSchroeder()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Divide("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, "1"));
@@ -112,7 +112,7 @@ namespace GithubActionsLab
         }
 
         [TestGriffinSchroeder]
-        public void Power_ValidTestGriffinSchroeder()
+        public void Power_InvalidTestGriffinSchroeder()
         {
             Assert.Throws<FormatException>(() => Program.Power("1", "a"));
             Assert.Throws<FormatException>(() => Program.Power("a", "1"));
@@ -120,7 +120,7 @@ namespace GithubActionsLab
         }
 
         [TestGriffinSchroeder]
-        public void Power_ValidTestGriffinSchroeder()
+        public void Power_NullTestGriffinSchroeder()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
